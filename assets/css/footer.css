@@ -1,0 +1,49 @@
+.flex-rw {
+  background: #000;
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+
+footer ul {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+}
+
+footer ul li {
+  color: #fff;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1
+}
+
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer list-top {
+  width: 33.333%
+}
+
+.footer-list-top li {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif;
+}
+
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif;
+}

@@ -1,0 +1,30 @@
+.product {
+    height: 300px;
+    width: 250px;
+}
+
+.shop-sec{
+    margin-top: 20px;
+}
+
+.jud-sec {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.cont-pro {
+    margin-top: 10px;
+}
+
+.nama-produk {
+    font-size: 20px;
+    text-align: center;
+}
+
+.harga-produk {
+    font-size: 17px;
+    text-align: center;
+    font-weight: lighter;
+}
