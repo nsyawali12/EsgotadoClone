@@ -1,38 +1,4 @@
-<?php 
 
-require_once("config.php");
-
-if(isset($_POST['login'])){
-
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
-    $sql = "SELECT * FROM users WHERE name=:name OR email=:email";
-    $stmt = $db->prepare($sql);
-    
-    // bind parameter ke query
-    $params = array(
-        ":name" => $name,
-        ":email" => $name
-    );
-
-    $stmt->execute($params);
-
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    // jika user terdaftar
-    if($user){
-        // verifikasi password
-        if(password_verify($password, $user["password"])){
-            // buat Session
-            session_start();
-            $_SESSION["user"] = $user;
-            // login sukses, alihkan ke halaman utama
-
-        }
-    }
-}
-?>
 
 
 <!DOCTYPE html>
@@ -42,8 +8,8 @@ if(isset($_POST['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 <body class="bg-light">
 
@@ -55,7 +21,7 @@ if(isset($_POST['login'])){
 
         <h4>Login</h4>
 
-        <form action="" method="POST">
+        <form action="<?php echo site_url("/login/login_user/");?>" method="POST">
 
             <div class="section colm colm7">
                 <label for="email" class="field prepend-icon">

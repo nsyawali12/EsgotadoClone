@@ -20,4 +20,11 @@ class home extends CI_Controller {
     public function contact(){
         $this->load->view('contact');
     }
+    public function login(){
+        $this->load->view('login');
+    }
+
+    public function register(){
+        $this->load->view('register');
+    }
 }

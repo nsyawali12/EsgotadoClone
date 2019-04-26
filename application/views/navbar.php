@@ -5,10 +5,10 @@
    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
        <li class="nav-item active">
-         <a class="nav-link" href="#"> Sign Up <span class="sr-only glyphicon glyphicon-user ">(current)</span></a>
+         <a class="nav-link" href="<?php echo site_url("/home/register/");?>"> Sign Up <span class="sr-only glyphicon glyphicon-user ">(current)</span></a>
        </li>
        <li class="nav-item">
-         <a class="nav-link text-dark" href="#"><span class="glyphicon glyphicon-user"> Login To Esgotado </span></a>
+         <a class="nav-link text-dark" href="<?php echo site_url("/home/login/");?>"><span class="glyphicon glyphicon-user"> Login To Esgotado </span></a>
        </li>
      </ul>
 
@@ -33,7 +33,7 @@
       <div class="container-nav">
         
         <nav class="navbar navbar-expand-lg navbar-light bg-light navtengah">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="<?php echo site_url("/home/ ");?>">
             <img src="<?php echo base_url("assets/image/Home/")?>logo_esgotado.png" width="150px" height="60px;">
           </a>
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
